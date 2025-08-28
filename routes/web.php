@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -21,3 +22,8 @@ Route::middleware([
 
 // ✅ Public home route
 Route::get('/', [HomeController::class, 'index'])->name('index');
+// ✅ Public products route
+Route::get('/product', [AdminController::class, 'product']);
+// ✅ Public products post data
+Route::post('/uploadproduct', [AdminController::class, 'uploadproduct'])->name('uploadproduct');
+
