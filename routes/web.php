@@ -26,4 +26,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/product', [AdminController::class, 'product']);
 // ✅ Public products post data
 Route::post('/uploadproduct', [AdminController::class, 'uploadproduct'])->name('uploadproduct');
+// ✅ show all product
+Route::get('/showproduct', [AdminController::class, 'showproduct']);
+// ✅ Delated  product
+Route::get('/deleteproduct/{id}', [AdminController::class, 'deleteproduct']);
 
